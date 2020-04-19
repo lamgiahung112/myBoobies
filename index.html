@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vếu cùng Hưng đẹp trai</title>
+    <style>
+        #left-boobs {
+            position: relative;
+            left: 5px;
+            width: 160px;
+            cursor: pointer;
+            top: 0px;
+            transition: all 2s;
+        }
+        #right-boobs {
+            position: relative;
+            left: 10px;
+            width: 150px;
+            cursor: pointer;
+            top: 0px;
+            transition: all 2s; 
+        }
+        #status {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./boob_up.jpg">
+        <span id="status"> Bóp vếu em đi hihi</span> 
+    </div>
+    <div>
+        <img src="./left_boob.jpg" id="left-boobs">
+        <img src="./right_boob.jpg" id="right-boobs">
+    </div>
+    <div>
+        <img src="./boob_down.jpg">
+    </div>
+    <script>
+        function playSound() {
+            const audio = new Audio('./davie504-epic.mp3');
+            audio.play();
+        }
+        let rightBoob = document.getElementById('right-boobs');
+        let leftBoob = document.getElementById('left-boobs');
+        let status = document.getElementById('status');
+
+        rightBoob.onclick = () => {
+            playSound();
+            status.innerText = "Oni chan bóp vếu em đi"
+            rightBoob.style.top = "-60px";
+            setTimeout(() => {
+                rightBoob.style.top = "0px"
+            },1000)
+        }
+        leftBoob.onclick = () => {
+            playSound();
+            status.innerText = "Oni chan bóp vếu em đi"
+            leftBoob.style.top = "-60px";
+            setTimeout(() => {
+                leftBoob.style.top = "0px"
+            },1000)
+        }
+
+        rightBoob.onmouseover = () => {
+            status.innerText = "chạm tay vào vếu";
+        }
+        rightBoob.onmouseleave = () => {
+            status.innerText = "chạm nữa đi baka baka"
+        }
+    </script>
+</body>
+</html>
